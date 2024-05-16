@@ -1,0 +1,38 @@
+{
+  "layer": "top",
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "battery"],
+    "custom/arch": {
+      "format": "  ",
+      "tooltip": false,
+      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
+    },
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "format": "{icon}",
+      "tooltip": false,
+      "all-outputs": true,
+      "format-icons": {
+        "active": "",
+        "default": ""
+      }
+    },
+    "clock": {
+      "format": "<span color='#606c38'> </span>{:%H:%M}",
+    },
+    "network": {
+      "interface": "wlan0",
+      "format": "{ifname}",
+      "format-wifi": "<span color='#606c38'> </span>",
+      "format-ethernet": "Ethernet",
+      "format-disconnected": "<span color='#606c38'>󰖪 </span>No Network",
+      "tooltip": false,
+    },
+    "battery": {
+      "format": "<span color='#606c38'>{icon}</span> {capacity}%",
+      "format-icons": ["", "", "", "", ""],
+      "format-charging": "<span color='#606c38'></span> {capacity}%",
+      "tooltip": false,
+    },
+}
